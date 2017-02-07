@@ -5,13 +5,13 @@ module.exports = {
     context: __dirname + '/app',
     entry: {
         app: './app.js',
-        vendor: ['angular']  
+        vendor: ['angular']
     },
     output: {
         path: __dirname + '/public/scripts',
         filename: 'todo.bundle.js'
     },
     plugins: [
-        new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"vendor", /* filename= */"vendor.bundle.js")
+        new webpack.optimize.CommonsChunkPlugin({name:"vendor", filename: "vendor.bundle.js"})
     ]
 };

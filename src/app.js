@@ -8,6 +8,8 @@ var router = require('./api');
 // Start the app
 var app = express();
 
+require('./data');
+
 // Tell 'Express' to only search for files in following folder
 app.use('/', express.static('public'));
 

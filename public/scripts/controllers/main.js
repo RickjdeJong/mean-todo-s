@@ -1,10 +1,12 @@
 'use strict';
 
+var angular = reqiore('angular');
+
 angular.module('todoListApp')
 .controller('mainCtrl', function($scope, dataService){
 
   dataService.getTodos(function(response){
-    var todos = response.data.todos;  
+    var todos = response.data.todos;
     $scope.todos =  todos;
     });
 
